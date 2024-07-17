@@ -6,4 +6,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\BiocaLabs.Common\BiocaLabs.Common.csproj"/>
+        <ProjectReference Include="..\Lab.Domain\Lab.Domain.csproj"/>
+    </ItemGroup>
+
 </Project>

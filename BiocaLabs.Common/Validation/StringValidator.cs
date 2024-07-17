@@ -4,16 +4,16 @@ namespace BiocaLabs.Common.Validation;
 
 public static class StringValidator
 {
-    public static void Validate(string value, string valueName, int minLength, int maxLength)
+    public static void Validate(string value, string paramName, int minLength, int maxLength)
     {
-        var lowerValueName = valueName.ToLower();
-        DomainValidationException.When(string.IsNullOrEmpty(value),
-            $"Invalid {lowerValueName}. {valueName} is required.");
-        DomainValidationException.When(string.IsNullOrWhiteSpace(value),
-            $"Invalid {lowerValueName}. {valueName} is required.");
-        DomainValidationException.When(value.Length < minLength,
-            $"Invalid {lowerValueName}. {valueName} must have at least {minLength} characters.");
-        DomainValidationException.When(value.Length > maxLength,
-            $"Invalid {lowerValueName}. {valueName} must have {maxLength} characters or less.");
+        var sanitizedValue = value.Trim();
+        StringValidationException.When(string.IsNullOrEmpty(sanitizedValue),
+            $"Invalid {paramName}. {paramName} is required.");
+        StringValidationException.When(string.IsNullOrWhiteSpace(sanitizedValue),
+            $"Invalid {paramName}. {paramName} is required.");
+        StringValidationException.When(sanitizedValue.Length < minLength,
+            $"Invalid {paramName}. {paramName} must have at least {minLength} characters.");
+        StringValidationException.When(sanitizedValue.Length > maxLength,
+            $"Invalid {paramName}. {paramName} must have {maxLength} characters or less.");
     }
 }
