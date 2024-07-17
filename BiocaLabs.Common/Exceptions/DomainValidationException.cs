@@ -1,13 +1,9 @@
-﻿namespace BiocaLabs.Common.Validation;
+﻿namespace BiocaLabs.Common.Exceptions;
 
 public class DomainValidationException(string message) : Exception(message)
 {
-    public static void When(bool isValid, string message)
+    public static void When(bool hasError, string message)
     {
-        if (!isValid)
-        {
-            throw new DomainValidationException(message);
-        }
+        if (hasError) throw new DomainValidationException(message);
     }
 }
-

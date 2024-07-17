@@ -1,8 +1,62 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BiocaLabs.Internal", "BiocaLabs.Internal", "{9812A9E6-4B16-4294-9ECC-8F8E7F00CBBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiocaLabs.API", "BiocaLabs.API\BiocaLabs.API.csproj", "{D7D5F9B9-1059-4A3C-9994-6FBA69A73A34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{94D4739B-5490-4009-BBA0-700B59ABA676}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab", "Lab", "{E954806E-1412-4F15-A7FF-9303C35AEE2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Domain", "Lab.Domain\Lab.Domain.csproj", "{1BBAE553-8FAB-426D-AD5F-EAA2BAD30F7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Infrastructure", "Lab.Infrastructure\Lab.Infrastructure.csproj", "{B4859E5A-72DA-40BE-B2E0-948AE36CE741}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Application", "Lab.Application\Lab.Application.csproj", "{5AF627EB-F1D4-4465-8886-48E9EDEE70E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiocaLabs.Common", "BiocaLabs.Common\BiocaLabs.Common.csproj", "{1ADFBC0A-FFCF-41B2-87E7-10C911EDAFD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Domain.Tests", "Lab.Domain.Tests\Lab.Domain.Tests.csproj", "{90A28505-B14F-473B-B2D8-557CE15F8689}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7D5F9B9-1059-4A3C-9994-6FBA69A73A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D5F9B9-1059-4A3C-9994-6FBA69A73A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D5F9B9-1059-4A3C-9994-6FBA69A73A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D5F9B9-1059-4A3C-9994-6FBA69A73A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBAE553-8FAB-426D-AD5F-EAA2BAD30F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBAE553-8FAB-426D-AD5F-EAA2BAD30F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBAE553-8FAB-426D-AD5F-EAA2BAD30F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBAE553-8FAB-426D-AD5F-EAA2BAD30F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4859E5A-72DA-40BE-B2E0-948AE36CE741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4859E5A-72DA-40BE-B2E0-948AE36CE741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4859E5A-72DA-40BE-B2E0-948AE36CE741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4859E5A-72DA-40BE-B2E0-948AE36CE741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF627EB-F1D4-4465-8886-48E9EDEE70E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF627EB-F1D4-4465-8886-48E9EDEE70E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF627EB-F1D4-4465-8886-48E9EDEE70E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF627EB-F1D4-4465-8886-48E9EDEE70E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ADFBC0A-FFCF-41B2-87E7-10C911EDAFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADFBC0A-FFCF-41B2-87E7-10C911EDAFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADFBC0A-FFCF-41B2-87E7-10C911EDAFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADFBC0A-FFCF-41B2-87E7-10C911EDAFD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A28505-B14F-473B-B2D8-557CE15F8689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A28505-B14F-473B-B2D8-557CE15F8689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A28505-B14F-473B-B2D8-557CE15F8689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A28505-B14F-473B-B2D8-557CE15F8689}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E954806E-1412-4F15-A7FF-9303C35AEE2B} = {9812A9E6-4B16-4294-9ECC-8F8E7F00CBBA}
+		{1BBAE553-8FAB-426D-AD5F-EAA2BAD30F7D} = {E954806E-1412-4F15-A7FF-9303C35AEE2B}
+		{B4859E5A-72DA-40BE-B2E0-948AE36CE741} = {E954806E-1412-4F15-A7FF-9303C35AEE2B}
+		{5AF627EB-F1D4-4465-8886-48E9EDEE70E0} = {E954806E-1412-4F15-A7FF-9303C35AEE2B}
+		{90A28505-B14F-473B-B2D8-557CE15F8689} = {E954806E-1412-4F15-A7FF-9303C35AEE2B}
 	EndGlobalSection
 EndGlobal

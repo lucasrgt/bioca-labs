@@ -1,0 +1,6 @@
+﻿services:
+  biocalabs.api:
+    image: biocalabs.api
+    build:
+      context: .
+      dockerfile: BiocaLabs.API/Dockerfile
