@@ -1,7 +1,14 @@
+using BiocaLabs.API.IoC;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add Db Connection
+builder.Services.AddAppDbContext(builder.Configuration.GetConnectionString("PostgresConnection"));
 
+// Add usecases to the container.
+builder.Services.AddUseCases();
+
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

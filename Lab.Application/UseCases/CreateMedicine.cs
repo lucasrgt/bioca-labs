@@ -23,7 +23,7 @@ public sealed class CreateMedicine(IMedicineRepository repository)
             input.PatentNumber,
             input.AnvisaNumber
         );
-
+ 
         // Call Repository
         await repository.SaveMedicineAsync(medicine);
 

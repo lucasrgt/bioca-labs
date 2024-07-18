@@ -12,9 +12,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Lab.Application\Lab.Application.csproj"/>
+        <ProjectReference Include="..\Lab.Domain\Lab.Domain.csproj"/>
+        <ProjectReference Include="..\Lab.Infrastructure\Lab.Infrastructure.csproj"/>
     </ItemGroup>
 
 </Project>
