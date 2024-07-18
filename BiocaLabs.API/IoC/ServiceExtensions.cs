@@ -1,6 +1,6 @@
-﻿using Lab.Application.UseCases;
+﻿using BiocaLabs.Data.DbContext;
+using Lab.Application.UseCases;
 using Lab.Domain.Repositories;
-using Lab.Infrastructure.DbContext;
 using Lab.Infrastructure.RepositoriesImpl;
 using Microsoft.EntityFrameworkCore;
 

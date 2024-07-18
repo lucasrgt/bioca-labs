@@ -7,16 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\BiocaLabs.Data\BiocaLabs.Data.csproj"/>
         <ProjectReference Include="..\Lab.Domain\Lab.Domain.csproj"/>
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4"/>
     </ItemGroup>
 
 </Project>

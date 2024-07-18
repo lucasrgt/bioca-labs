@@ -1,6 +1,6 @@
-﻿using Lab.Domain.Entities;
+﻿using BiocaLabs.Data.DbContext;
+using Lab.Domain.Entities;
 using Lab.Domain.Repositories;
-using Lab.Infrastructure.DbContext;
 
 namespace Lab.Infrastructure.RepositoriesImpl;
 

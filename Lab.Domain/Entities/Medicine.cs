@@ -8,6 +8,10 @@ namespace Lab.Domain.Entities;
 public sealed class Medicine
     : BaseEntity
 {
+    public Medicine()
+    {
+    }
+
     public Medicine(string name, string commercialName, string description, MedicineColor color, string patentNumber,
         string anvisaNumber)
     {

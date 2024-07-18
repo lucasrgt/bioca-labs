@@ -1,12 +1,12 @@
 ﻿using Lab.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Lab.Infrastructure.DbContext;
+namespace BiocaLabs.Data.DbContext;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : Microsoft.EntityFrameworkCore.DbContext(options)
 {
     // Lab
-    public DbSet<Medicine> Medicines { get; set; }
+    public DbSet<Medicine> Medicines { get; init; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
