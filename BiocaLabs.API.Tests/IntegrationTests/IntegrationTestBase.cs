@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Testcontainers.PostgreSql;
 
-namespace BiocaLabs.IntegrationTests.IntegrationTests.Lab;
+namespace BiocaLabs.IntegrationTests.IntegrationTests;
 
 public abstract class IntegrationTestBase : IAsyncLifetime
 {

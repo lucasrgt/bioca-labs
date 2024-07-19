@@ -30,6 +30,7 @@ public static class ServiceExtensions
     public static IServiceCollection AddUseCases(this IServiceCollection services)
     {
         // Lab
+        services.AddScoped<GetMedicineByName>();
         services.AddScoped<CreateMedicine>();
 
         return services;

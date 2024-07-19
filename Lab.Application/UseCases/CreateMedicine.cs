@@ -5,10 +5,6 @@ using Lab.Domain.Repositories;
 
 namespace Lab.Application.UseCases;
 
-// 1. acessar o dominio
-// 2. acessar o repositorio
-// 3. disparar eventos, enviar email, enviar um sms
-
 public sealed class CreateMedicine(IMedicineRepository repository)
 {
     public async Task<CreateMedicineOutput> ExecuteAsync(CreateMedicineInput input)
@@ -23,7 +19,7 @@ public sealed class CreateMedicine(IMedicineRepository repository)
             input.PatentNumber,
             input.AnvisaNumber
         );
- 
+
         // Call Repository
         await repository.SaveMedicineAsync(medicine);
 
