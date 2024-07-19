@@ -1,4 +1,5 @@
-﻿using Lab.Domain.Entities;
+﻿using System.Text.Json.Serialization;
+using Lab.Domain.Entities;
 
 namespace Lab.Application.DTOs;
 
@@ -8,8 +9,10 @@ public record CreateMedicineInput(
     string Description,
     string Color,
     string PatentNumber,
-    string AnvisaNumber);
+    string AnvisaNumber
+);
 
 public record CreateMedicineOutput(
+    [property: JsonPropertyName("createdMedicine")]
     Medicine CreatedMedicine
 );

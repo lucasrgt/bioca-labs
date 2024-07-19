@@ -19,8 +19,9 @@ public class MedicineController(CreateMedicine createMedicineUc) : ControllerBas
         }
         catch (Exception e)
         {
-            if (e is DomainValidationException or StringValidationException) return BadRequest(e.Message);
-            return StatusCode(StatusCodes.Status500InternalServerError, e.Message);
+            return e is DomainValidationException or StringValidationException
+                ? BadRequest(e.Message)
+                : StatusCode(StatusCodes.Status500InternalServerError, e.Message);
         }
     }
 }
