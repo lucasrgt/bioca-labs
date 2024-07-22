@@ -32,6 +32,8 @@ public static class ServiceExtensions
         // Lab
         services.AddScoped<GetMedicineByName>();
         services.AddScoped<CreateMedicine>();
+        services.AddScoped<UpdateMedicine>();
+        services.AddScoped<DeleteMedicine>();
 
         return services;
     }

@@ -1,8 +1,17 @@
 ﻿namespace BiocaLabs.Common.Base;
 
-public class BaseEntity
+public abstract class BaseEntity
 {
-    public Guid Id { get; private set; } = Guid.NewGuid();
+    protected BaseEntity()
+    {
+    }
+
+    protected BaseEntity(Guid id)
+    {
+        Id = id;
+    }
+
+    public Guid Id { get; protected set; }
     public DateTime CreatedOn { get; private set; } = DateTime.UtcNow;
     public DateTime UpdatedOn { get; private set; } = DateTime.UtcNow;
 }

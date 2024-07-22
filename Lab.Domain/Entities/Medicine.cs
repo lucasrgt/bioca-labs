@@ -12,8 +12,11 @@ public sealed class Medicine
     {
     }
 
-    public Medicine(string name, string commercialName, string description, MedicineColor color, string patentNumber,
-        string anvisaNumber)
+    public Medicine(string name, string commercialName, string description,
+        MedicineColor color,
+        string patentNumber,
+        string anvisaNumber, Guid? id = null)
+        : base(id ?? Guid.NewGuid())
     {
         Validate(name, commercialName, description);
         Name = name;
@@ -29,9 +32,9 @@ public sealed class Medicine
     public string CommercialName { get; private set; }
     public string Description { get; private set; }
     public MedicineColor Color { get; private set; }
-    public MedicineRegistration Registration { get; }
+    public MedicineRegistration Registration { get; private set; }
 
-    private void Validate(string name, string commercialName, string description)
+    private static void Validate(string name, string commercialName, string description)
     {
         StringValidator.Validate(name, "Name", 3, 100);
         StringValidator.Validate(commercialName, "CommercialName", 5, 100);

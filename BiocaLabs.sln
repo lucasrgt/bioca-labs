@@ -4,11 +4,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BiocaLabs.Internal", "Bioca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiocaLabs.API", "BiocaLabs.API\BiocaLabs.API.csproj", "{D7D5F9B9-1059-4A3C-9994-6FBA69A73A34}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{94D4739B-5490-4009-BBA0-700B59ABA676}"
-	ProjectSection(SolutionItems) = preProject
-		docker-compose.yml = docker-compose.yml
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab", "Lab", "{E954806E-1412-4F15-A7FF-9303C35AEE2B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Domain", "Lab.Domain\Lab.Domain.csproj", "{1BBAE553-8FAB-426D-AD5F-EAA2BAD30F7D}"
@@ -30,6 +25,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiocaLabs.API.Tests", "BiocaLabs.API.Tests\BiocaLabs.API.Tests.csproj", "{589D71B2-D614-49FB-BC30-C5F7D5523827}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BiocaLabs.Common", "BiocaLabs.Common", "{B6E92931-2610-4228-B4D6-8523EDAAEF42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BiocaLabs.K8S", "BiocaLabs.K8S", "{2BC12F9A-BA4B-4683-BBE1-790F367F3AE3}"
+	ProjectSection(SolutionItems) = preProject
+		biocalabs-depl.yaml = biocalabs-depl.yaml
+		local-pvc.yaml = local-pvc.yaml
+		psql-plat-depl.yaml = psql-plat-depl.yaml
+		ingress-srv.yaml = ingress-srv.yaml
+		psql-secret.yaml = psql-secret.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

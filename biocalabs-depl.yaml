@@ -1,0 +1,31 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: biocalabs-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: biocalabsservice
+  template:
+    metadata:
+      labels:
+        app: biocalabsservice
+    spec:
+      containers:
+        - name: biocalabsservice
+          image: lucasrgt/biocalabsservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: biocalabs-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: biocalabsservice
+  ports:
+    - name: biocalabs
+      protocol: TCP
+      port: 8080
+      targetPort: 8080

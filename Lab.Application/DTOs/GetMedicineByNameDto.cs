@@ -4,6 +4,6 @@ using Lab.Domain.Entities;
 namespace Lab.Application.DTOs;
 
 public record GetMedicineByNameOutput(
-    [property: JsonPropertyName("createdMedicine")]
-    Medicine CreatedMedicine
+    [property: JsonPropertyName("medicine")]
+    Medicine Medicine
 );
