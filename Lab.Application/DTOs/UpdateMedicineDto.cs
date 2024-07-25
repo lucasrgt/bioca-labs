@@ -11,7 +11,7 @@ public record UpdateMedicineInput(
     string PatentNumber,
     string AnvisaNumber
 );
-
+ 
 public record UpdateMedicineOutput(
     [property: JsonPropertyName("updatedMedicine")]
     Medicine UpdatedMedicine

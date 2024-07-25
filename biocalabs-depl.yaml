@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: biocalabsservice
   template:
-    metadata:
+    metadata: 
       labels:
         app: biocalabsservice
     spec:

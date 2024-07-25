@@ -2,6 +2,7 @@
 using Lab.Application.UseCases;
 using Lab.Domain.Repositories;
 using Lab.Infrastructure.RepositoriesImpl;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace BiocaLabs.API.IoC;
@@ -15,6 +16,18 @@ public static class ServiceExtensions
 
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(connectionString));
+
+        return services;
+    }
+
+    public static IServiceCollection SetupIdentity(this IServiceCollection services)
+    {
+        services.AddIdentity<IdentityUser, IdentityRole>(options =>
+        {
+            options.SignIn.RequireConfirmedEmail = true;
+            options.Lockout.MaxFailedAccessAttempts = 5;
+            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+        }).AddEntityFrameworkStores<AppDbContext>().AddRoles<IdentityRole>().AddDefaultTokenProviders();
 
         return services;
     }

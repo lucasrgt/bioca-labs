@@ -17,6 +17,7 @@ builder.Services.AddRepositories();
 
 // Add Db Connection
 builder.Services.AddAppDbContext(builder.Configuration.GetConnectionString("PostgresConnection"));
+builder.Services.SetupIdentity();
 
 var app = builder.Build();
 
